@@ -9,6 +9,7 @@
           x-large
           @click="showCategoryData(link.category,index)">
         {{ link.category }}
+
       </v-btn>
     </v-col>
   <!--     Products   -->
