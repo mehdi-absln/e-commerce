@@ -38,7 +38,7 @@ export default new Vuex.Store({
             const data = await fetch('http://localhost:3000/products');
             let products = await data.json();
             commit('setProducts', products);
-            console.log('ver')
+            console.log('verrrr')
             },
     },
     modules: {}
