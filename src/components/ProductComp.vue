@@ -1,10 +1,9 @@
 <template>
   <v-card class="tab-card"
-          max-width="200"
+          max-width="270"
   >
     <v-img
         height="150"
-        max-width="200"
         :src="card.image"
     ></v-img>
     <v-card-title>{{ card.title.substring(0, 20).concat('...') }}</v-card-title>
@@ -56,5 +55,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

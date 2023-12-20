@@ -268,7 +268,7 @@
         <v-row class="products-section-row">
           <div class="d-flex justify-space-between align-center w-100 pb-10">
             <h2 class="display-1 font-weight-bold purple--text"> محصولات ویژه</h2>
-            <router-link class="products-link text-center" to="/"> مشاهده همه
+            <router-link class="products-link text-center" to="/">  مشاهده همه
               <v-icon
                   dark
                   right
@@ -279,56 +279,10 @@
               </v-icon>
             </router-link>
           </div>
-          <v-col cols="12" class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container">
-            <v-card v-for="card in specialProduct" class="tab-card" :key="card.id"
-                    max-width="200"
-            >
-              <v-img
-                  height="150"
-                  max-width="200"
-                  :src="card.image"
-              ></v-img>
-              <v-card-title>{{ card.title.substring(0, 20).concat('...') }}</v-card-title>
-              <v-card-text class="tab-card-text">
-                <v-row
-                    align="center"
-                    class="mx-0"
-                >
-                  <v-rating
-                      :value="card.rating.rate"
-                      color="amber"
-                      dense
-                      half-increments
-                      readonly
-                      size="14"
-                  ></v-rating>
-
-                  <div class="grey--text ms-4">
-                    4.5 (413)
-                  </div>
-                </v-row>
-
-                <div class="my-4 text-subtitle-1">
-                  {{ card.category }}
-                </div>
-
-                <div class="tab-description d-flex">
-                  {{ card.description.substring(0, 40).concat('...') }}
-                </div>
-              </v-card-text>
-              <v-card-actions class="tab-card-btn-wrapper p-absolute mt-4">
-                <v-btn
-                    text
-                    color="purple"
-                    class="tab-card-btn w-100"
-                >
-                  <v-icon aria-label="My Account" role="img" aria-hidden="false">
-                    mdi-cart-outline
-                  </v-icon>
-                  سبد خرید
-                </v-btn>
-              </v-card-actions>
-            </v-card>
+          <v-col cols="12" class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
+            <v-col cols="12" class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
+              <ProductComp v-for="card in specialProduct" :card="card" :key="card.id"/>
+            </v-col>
           </v-col>
         </v-row>
       </v-container>
@@ -388,10 +342,11 @@
 import {mdiChevronLeft} from '@mdi/js';
 import CountDownComp from "@/components/CountDownComp";
 import TabProductsComp from "@/components/TabProductsComp";
+import ProductComp from "@/components/ProductComp.vue";
 
 export default {
   name: 'HomeView',
-  components: {TabProductsComp, CountDownComp},
+  components: {ProductComp, TabProductsComp, CountDownComp},
   data() {
     return {
       show: null,

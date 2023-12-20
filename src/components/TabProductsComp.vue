@@ -1,7 +1,7 @@
 <template>
   <div class="w-100">
   <!--    Tab product category    -->
-    <v-col cols="12" class="row gap-row-sm gap-col-sm">
+    <v-col cols="12" class="row gap-row-sm gap-col-sm ">
       <v-btn
           v-for="(link,index) in productCategoriesTitle" :key="link + index"
           outlined
@@ -9,11 +9,10 @@
           x-large
           @click="showCategoryData(link.category,index)">
         {{ link.category }}
-
       </v-btn>
     </v-col>
   <!--     Products   -->
-    <v-col cols="12" class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container">
+    <v-col cols="12" class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container pa-0 pe-0">
       <ProductComp v-for="card in productCategoryCard" :card="card" :key="card.id"/>
     </v-col>
   </div>

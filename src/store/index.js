@@ -20,7 +20,6 @@ export default new Vuex.Store({
     mutations: {
         setProducts(state, products) {
             state.products = products;
-            // console.log(state.products);
         },
         uniqueCategory: (state) => {
             state.productCategoriesTitle = state.products.filter(element => {
@@ -38,7 +37,6 @@ export default new Vuex.Store({
             const data = await fetch('http://localhost:3000/products');
             let products = await data.json();
             commit('setProducts', products);
-            console.log('verrrr')
             },
     },
     modules: {}
