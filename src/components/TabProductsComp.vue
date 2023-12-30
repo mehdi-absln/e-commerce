@@ -73,10 +73,8 @@ export default {
     },
   },
   methods: {
-    async showCategoryData(link, i) {
-      await this.$store.dispatch('getProducts');
+     showCategoryData(link, i) {
       this.productCategoryCard = this.categories(link).slice(0, 4);
-      await this.$store.commit(' uniqueCategory')
       const tabBtn = document.querySelectorAll('.tab-category-btn');
       tabBtn.forEach(contentBtn => contentBtn.classList.remove('active'));
       tabBtn[i].classList.add('active');

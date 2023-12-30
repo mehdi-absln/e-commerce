@@ -1,6 +1,7 @@
 <template>
-  <v-card class="tab-card"
+  <v-card class="tab-card cursor-pointer"
           max-width="270"
+          @click="goToProductPage(card.id)"
   >
     <v-img
         height="150"
@@ -47,12 +48,23 @@
   </v-card>
 </template>
 
+<style scoped lang="scss">
+.tab-card:hover{
+  filter: drop-shadow(0 1px 5px rgba(0,0,0,.2));
+  transition: all 0.3s;
+}
+</style>
+
 <script>
+import router from "@/router";
+
 export default {
   name: "ProductComp",
-  props:['card']
+  props:['card'],
+  methods:{
+    goToProductPage(id){
+      router.push({name:'ProductDetailView', params:{id}})
+    }
+  }
 }
 </script>
-
-<style scoped lang="scss">
-</style>

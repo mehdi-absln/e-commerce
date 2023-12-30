@@ -15,7 +15,7 @@ export default new Vuex.Store({
         },
         specialProduct(state) {
             return state.products.filter(product => product.special )
-        }
+        },
     },
     mutations: {
         setProducts(state, products) {
