@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         products: [],
+        product: null,
         uniqueIds: [],
         productCategoriesTitle: [],
         cart: [],
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     mutations: {
         setProducts(state, products) {
             state.products = products;
+        },
+        setProduct(state, product) {
+            state.product = product;
         },
         uniqueCategory: (state) => {
             state.productCategoriesTitle = state.products.filter(element => {
@@ -38,7 +42,12 @@ export default new Vuex.Store({
             const data = await fetch('http://localhost:3000/products');
             let products = await data.json();
             commit('setProducts', products);
-            },
+        },
+        async getProduct({commit}, id) {
+            const data = await fetch(`http://localhost:3000/products/${id}`);
+            let product = await data.json();
+            commit("setProduct", product);
+        },
     },
     modules: {}
 })

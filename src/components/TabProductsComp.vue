@@ -1,6 +1,6 @@
 <template>
   <div class="w-100">
-  <!--    Tab product category    -->
+    <!--    Tab product category    -->
     <v-col cols="12" class="row gap-row-sm gap-col-sm ">
       <v-btn
           v-for="(link,index) in productCategoriesTitle" :key="link + index"
@@ -11,8 +11,9 @@
         {{ link.category }}
       </v-btn>
     </v-col>
-  <!--     Products   -->
-    <v-col cols="12" class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container pa-0 pe-0">
+    <!--     Products   -->
+    <v-col cols="12"
+           class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container pa-0 pe-0">
       <ProductComp v-for="card in productCategoryCard" :card="card" :key="card.id"/>
     </v-col>
   </div>
@@ -20,14 +21,17 @@
 
 <style lang="scss">
 @import "../assets/scss/variable";
-  .tab-category-btn  {
-    border: 1px solid $purple;
-    &.active {
-      background: $purple;
-      color: white !important;
-    }
+
+.tab-category-btn {
+  border: 1px solid $purple;
+
+  &.active {
+    background: $purple;
+    color: white !important;
   }
-.tab-card-product-container{
+}
+
+.tab-card-product-container {
   .tab-card {
     &:first-child {
       margin-top: 0 !important;
@@ -37,9 +41,11 @@
       visibility: visible;
     }
   }
+
   .tab-card-btn {
     visibility: hidden;
   }
+
   .tab-card-btn-wrapper {
     min-height: 40px;
     width: 100%;
@@ -55,6 +61,7 @@
 
 <script>
 import ProductComp from "@/components/ProductComp";
+
 export default {
   name: "TabComp",
   components: {ProductComp},
@@ -73,7 +80,7 @@ export default {
     },
   },
   methods: {
-     showCategoryData(link, i) {
+    showCategoryData(link, i) {
       this.productCategoryCard = this.categories(link).slice(0, 4);
       const tabBtn = document.querySelectorAll('.tab-category-btn');
       tabBtn.forEach(contentBtn => contentBtn.classList.remove('active'));
@@ -81,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    this.showCategoryData('لباس های مردانه', 0);
-  }
+     this.showCategoryData('لباس های مردانه', 0)
+  },
 }
 </script>

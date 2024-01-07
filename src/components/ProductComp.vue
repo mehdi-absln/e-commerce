@@ -1,7 +1,7 @@
 <template>
+  <router-link  :to="{ name: 'ProductDetailView', params: { id: card.id } }">
   <v-card class="tab-card cursor-pointer"
           max-width="270"
-          @click="goToProductPage(card.id)"
   >
     <v-img
         height="150"
@@ -46,6 +46,7 @@
       </v-btn>
     </v-card-actions>
   </v-card>
+  </router-link>
 </template>
 
 <style scoped lang="scss">
@@ -56,15 +57,10 @@
 </style>
 
 <script>
-import router from "@/router";
 
 export default {
   name: "ProductComp",
   props:['card'],
-  methods:{
-    goToProductPage(id){
-      router.push({name:'ProductDetailView', params:{id}})
-    }
-  }
+  methods:{}
 }
 </script>

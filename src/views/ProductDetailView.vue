@@ -80,13 +80,19 @@ export default {
   name: "ProductDetailView",
   computed: {
     selectedProduct() {
-      return this.$store.state.products.find((item) => item.id === this.$route.params.id)
+      return this.$store.state.product
     },
   },
   methods:{
     addToCart(){
       console.log('veweawewqr')
-    }
+    },
+    makeRequest(){
+      this.$store.dispatch('getProduct',this.$route.params.id)
+    },
+  },
+  mounted() {
+   this.makeRequest();
   }
 }
 </script>

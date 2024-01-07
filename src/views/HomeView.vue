@@ -1,5 +1,5 @@
-<template v-if="show">
-  <v-main>
+<template>
+  <div v-if="show">
     <!--    Start Banner Section -->
     <section class="banner-section w-100 py-14">
     </section>
@@ -268,7 +268,7 @@
         <v-row class="products-section-row">
           <div class="d-flex justify-space-between align-center w-100 pb-10">
             <h2 class="display-1 font-weight-bold purple--text"> محصولات ویژه</h2>
-            <router-link class="products-link text-center" to="/">  مشاهده همه
+            <router-link class="products-link text-center" to="/"> مشاهده همه
               <v-icon
                   dark
                   right
@@ -279,8 +279,10 @@
               </v-icon>
             </router-link>
           </div>
-          <v-col cols="12" class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
-            <v-col cols="12" class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
+          <v-col cols="12"
+                 class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
+            <v-col cols="12"
+                   class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
               <ProductComp v-for="card in specialProduct" :card="card" :key="card.id"/>
             </v-col>
           </v-col>
@@ -288,7 +290,7 @@
       </v-container>
     </section>
     <!--    End Special Products Section -->
-  </v-main>
+  </div>
 </template>
 <style lang="scss" scoped>
 @import "../assets/scss/variable";
@@ -298,37 +300,40 @@
   background: url("../assets/img/banner/fashion-banner-2.png") center;
   background-size: cover;
 }
+
 // End Banner Section
 // Start About Shop Section
 .about-shop-section {
   .body-1 {
     line-height: 2.5 !important;
   }
+
   .category-list-item-image {
     width: 50px;
     height: 60px;
   }
 }
+
 // End About Shop Section
 // Link Style Products
-  .category-list-item-link,.products-link {
-    color: black;
-    font-weight: 300;
+.category-list-item-link, .products-link {
+  color: black;
+  font-weight: 300;
 
-    &:first-child {
-      padding: 0 !important;
-    }
-
-    &:hover {
-      color: $purple;
-    }
+  &:first-child {
+    padding: 0 !important;
   }
 
-  @media only screen and (min-width: 1264px) {
-    .col-lg-3 {
-      max-width: 23% !important;
-    }
+  &:hover {
+    color: $purple;
   }
+}
+
+@media only screen and (min-width: 1264px) {
+  .col-lg-3 {
+    max-width: 23% !important;
+  }
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -349,7 +354,6 @@ export default {
   components: {ProductComp, TabProductsComp, CountDownComp},
   data() {
     return {
-      show: null,
       second: null,
       minute: null,
       hour: null,
@@ -359,6 +363,7 @@ export default {
       error: null,
       errorMsg: '',
       email: '',
+      show: null,
       icons: {
         mdiChevronLeft
       },
@@ -387,7 +392,7 @@ export default {
       return this.$store.state.productCategoriesTitle
     },
     specialProduct() {
-      return this.$store.getters.specialProduct.slice(0,4);
+      return this.$store.getters.specialProduct.slice(0, 4);
     },
   },
   watch: {
@@ -396,6 +401,11 @@ export default {
       this[l] = !this[l]
       setTimeout(() => (this[l] = false), 3000)
     },
+  },
+  async mounted() {
+    await this.$store.dispatch('getProducts');
+    await this.$store.commit('uniqueCategory');
+    this.show = true;
   },
 }
 </script>
