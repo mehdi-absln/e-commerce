@@ -33,18 +33,6 @@
         {{ card.description.substring(0, 40).concat('...') }}
       </div>
     </v-card-text>
-    <v-card-actions class="tab-card-btn-wrapper p-absolute mt-4">
-      <v-btn
-          text
-          color="purple"
-          class="tab-card-btn w-100"
-      >
-        <v-icon aria-label="My Account" role="img" aria-hidden="false">
-          mdi-cart-outline
-        </v-icon>
-        سبد خرید
-      </v-btn>
-    </v-card-actions>
   </v-card>
   </router-link>
 </template>
@@ -61,6 +49,5 @@
 export default {
   name: "ProductComp",
   props:['card'],
-  methods:{}
 }
 </script>

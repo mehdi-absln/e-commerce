@@ -51,10 +51,6 @@
     width: 100%;
     bottom: 0;
   }
-
-  .tab-card-text {
-    min-height: 180px;
-  }
 }
 </style>
 

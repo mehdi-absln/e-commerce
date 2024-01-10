@@ -26,6 +26,10 @@ export default new Vuex.Store({
         setProduct(state, product) {
             state.product = product;
         },
+        setCart(state,cart){
+          state.cart.push(cart);
+          console.log(cart)
+        },
         uniqueCategory: (state) => {
             state.productCategoriesTitle = state.products.filter(element => {
                 const isDuplicate = state.uniqueIds.includes(element.category);
@@ -35,7 +39,7 @@ export default new Vuex.Store({
                 }
                 return false;
             })
-        }
+        },
     },
     actions: {
         async getProducts({commit}) {
@@ -48,6 +52,9 @@ export default new Vuex.Store({
             let product = await data.json();
             commit("setProduct", product);
         },
+        getCart({commit}, cart){
+            commit('setCart',cart);
+        }
     },
     modules: {}
 })

@@ -23,6 +23,7 @@
                  outlined
                  plain
                  text
+                 @click="goToCart"
           >
             <v-icon color="purple darken-4" aria-label="My Account" role="img" aria-hidden="false">
               mdi-cart-outline
@@ -59,6 +60,11 @@ export default {
     },
     showMegaMenu: false,
   }),
+  methods:{
+    goToCart(){
+      this.$router.push({name:'CartView'})
+    }
+  }
 }
 </script>
 
