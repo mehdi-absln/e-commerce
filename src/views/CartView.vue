@@ -1,53 +1,48 @@
 <template>
-  <v-container class="">
-        <h2>سبد خرید</h2>
-    <div v-for="product in cart" :key="product.id" class="w-100">
-      <v-row class="align-center">
-        <v-col cols="4">
+  <v-container class="py-10">
+    <h2>سبد خرید ({{this.cart.length}})</h2>
+    <div v-for="product in cart" :key="product.id" class="w-100 mt-9">
+      <v-row class="align-center justify-space-between">
+        <v-col cols="2">
           <img class="w-100" :src="product.image" :alt="product.title"/>
         </v-col>
-        <v-col cols="4">
-          <h3>{{product.title}}</h3>
-          <p>{{product.description}}</p>
+        <v-col cols="6">
+          <h3 class="display-1 font-weight-bold">{{ product.title }}</h3>
+          <p class="pt-5">{{ product.description }}</p>
         </v-col>
-        <v-col cols="4" class="d-flex align-center justify-space-between">
-          <span>{{product.price}}</span>
-          <form>
-            <div class="value-button" id="decrease" @click="decreaseValue">-</div>
-            <input type="number" disabled id="number" v-model="value"/>
-            <div class="value-button" id="increase" @click="increaseValue">+</div>
+        <v-col cols="2" class="d-flex align-center justify-center">
+          <span>{{ product.price }}</span>
+          <form class="ms-6">
+            <div class="value-button" id="decrease" @click="decreaseCartQuantity(product.id)">-</div>
+            <input type="number" disabled id="number" v-model="product.quantity"/>
+            <div class="value-button" id="increase" @click="increaseCartQuantity(product.id)">+</div>
           </form>
+          <v-btn @click="removeCartProduct(product.id)" color="error" class="delete-btn ms-6"
+                 outlined><img src="../assets/img/delete.png" alt="delete"></v-btn>
         </v-col>
       </v-row>
     </div>
+    <hr/>
+    <div class="pt-5"><h5 class="total-price-text">جمع سبد خرید: <span>{{totalPrice}}</span></h5></div>
   </v-container>
 </template>
 
 <style scoped lang="scss">
 form {
-  width: 300px;
-  margin: 0 auto;
   text-align: center;
-  padding-top: 50px;
-  display:flex;
-  flex-direction:column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
-
 .value-button {
   display: inline-block;
   border: 1px solid #ddd;
   margin: 0px;
   width: 40px;
-  height: 20px;
+  height: 40px;
   text-align: center;
   vertical-align: middle;
   padding: 11px 0;
   background: #eee;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -html-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -73,8 +68,7 @@ input#number {
   border: none;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  margin: 0px;
-  width: 36px;
+  width: 40px;
   height: 40px;
 }
 
@@ -83,31 +77,45 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.delete-btn {
+  color: #DC3545 !important;
+  caret-color: #DC3545 !important;
+  height: 40px!important;
+  min-width: 50px!important;
+  padding: 0 0!important;
+  img {
+    width: 18px;
+  }
+}
+.total-price-text{
+  font-size: 1.3rem;
+  span{
+    font-weight: 500;
+  }
+}
 </style>
 
 <script>
 export default {
   name: "CartView",
-  data() {
-    return {
-      value: 1,
-    }
-  },
   computed: {
     cart() {
       return this.$store.state.cart;
+    },
+    totalPrice() {
+      return this.$store.getters.totalPrice;
     }
   },
   methods: {
-    increaseValue() {
-      this.value++;
+    increaseCartQuantity(id) {
+      this.$store.commit('incrementCartItemQuantity',id)
     },
-    decreaseValue() {
-      if (this.value < 2){
-        this.value = 2;
-      }
-      this.value--;
+    decreaseCartQuantity(id) {
+      this.$store.commit('decrementCartItemQuantity',id)
     },
+    removeCartProduct(id){
+      this.$store.commit('removeCartProductItem',id)
+    }
   },
 }
 </script>

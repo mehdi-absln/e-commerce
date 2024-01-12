@@ -85,7 +85,7 @@ export default {
   },
   methods:{
     addToCart(){
-      this.$store.dispatch('getCart',this.selectedProduct)
+      this.$store.commit('setCart',this.selectedProduct);
     },
     makeRequest(){
       this.$store.dispatch('getProduct',this.$route.params.id)

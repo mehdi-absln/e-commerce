@@ -10,6 +10,7 @@ export default new Vuex.Store({
         uniqueIds: [],
         productCategoriesTitle: [],
         cart: [],
+        quantity: null,
     },
     getters: {
         getCategory: (state) => (category) => {
@@ -18,6 +19,11 @@ export default new Vuex.Store({
         specialProduct(state) {
             return state.products.filter(product => product.special )
         },
+        totalPrice(state) {
+            return state.cart.reduce((count, curItem) => {
+                return count + (curItem.quantity * curItem.price);
+            }, 0);
+        }
     },
     mutations: {
         setProducts(state, products) {
@@ -27,8 +33,28 @@ export default new Vuex.Store({
             state.product = product;
         },
         setCart(state,cart){
-          state.cart.push(cart);
-          console.log(cart)
+            const cartItemIndex = state.cart.findIndex(item => item.id === cart.id);
+
+            if(cartItemIndex < 0) {
+                state.cart.push({...cart, quantity: 1});
+            } else {
+                if(state.cart[cartItemIndex].quantity === 10) return  0;
+                state.cart[cartItemIndex].quantity++;
+            }
+            console.log(state.cart)
+        },
+        incrementCartItemQuantity (state, id) {
+            const cartItemIndex =   state.cart.findIndex(item => item.id === id);
+            if(state.cart[cartItemIndex].quantity === 10) return 0;
+            state.cart[cartItemIndex].quantity++;
+        },
+        decrementCartItemQuantity (state, id) {
+            const cartItemIndex =   state.cart.findIndex(item => item.id === id);
+            if(state.cart[cartItemIndex].quantity === 1) return  0;
+            state.cart[cartItemIndex].quantity--;
+        },
+        removeCartProductItem(state,id){
+          state.cart = state.cart.filter(product=> product.id !== id);
         },
         uniqueCategory: (state) => {
             state.productCategoriesTitle = state.products.filter(element => {
@@ -52,9 +78,6 @@ export default new Vuex.Store({
             let product = await data.json();
             commit("setProduct", product);
         },
-        getCart({commit}, cart){
-            commit('setCart',cart);
-        }
     },
     modules: {}
 })
