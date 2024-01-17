@@ -17,8 +17,7 @@
     >
       <v-img
           :src="selectedProduct.image"
-          class="product-detail-img mx-auto"
-          height="400"
+          class="product-image mx-auto"
       ></v-img>
       <v-card-title>{{ selectedProduct.title }}</v-card-title>
 
@@ -61,31 +60,47 @@
           افزودن به سبد
         </v-btn>
       </v-card-actions>
+      <v-alert
+          transition="scale-transition"
+          color="green"
+          type="success"
+          v-if="showAlert"
+      >با موفقیت به سبد خرید اضافه شد</v-alert>
     </v-card>
   </v-container>
 </template>
 
 <style scoped lang="scss">
-.product-detail-img {
-  width: 50%;
-}
-
 .product-detail-link {
   color: black;
+}
+@media only screen and (min-width: 500px) {
+  .product-image {
+    width: 40%;
+  }
 }
 </style>
 
 <script>
 export default {
   name: "ProductDetailView",
+  data(){
+    return{
+    showAlert:null,
+    }
+  },
   computed: {
     selectedProduct() {
       return this.$store.state.product
     },
   },
   methods:{
-    addToCart(){
+    async addToCart(){
       this.$store.commit('setCart',this.selectedProduct);
+      this.showAlert = true;
+      setTimeout(() => {
+        this.showAlert = false;
+      }, 1000);
     },
     makeRequest(){
       this.$store.dispatch('getProduct',this.$route.params.id)

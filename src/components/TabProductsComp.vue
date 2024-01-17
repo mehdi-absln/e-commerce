@@ -14,7 +14,7 @@
     <!--     Products   -->
     <v-col cols="12"
            class="d-flex flex-wrap justify-space-between mt-10 gap-row-sm tab-card-product-container pa-0 pe-0">
-      <ProductComp v-for="card in productCategoryCard" :card="card" :key="card.id"/>
+      <ProductComp class="col-md-3 col-sm-4 col-12" v-for="card in productCategoryCard" :card="card" :key="card.id"/>
     </v-col>
   </div>
 </template>

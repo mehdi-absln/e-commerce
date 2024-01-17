@@ -1,5 +1,5 @@
 <template>
-  <div v-if="show">
+  <div>
     <!--    Start Banner Section -->
     <section class="banner-section w-100 py-14">
     </section>
@@ -283,7 +283,7 @@
                  class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
             <v-col cols="12"
                    class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0">
-              <ProductComp v-for="card in specialProduct" :card="card" :key="card.id"/>
+              <ProductComp class="col-md-3 col-sm-4 col-12" v-for="card in specialProduct" :card="card" :key="card.id"/>
             </v-col>
           </v-col>
         </v-row>
@@ -402,10 +402,10 @@ export default {
       setTimeout(() => (this[l] = false), 3000)
     },
   },
-  async mounted() {
-    await this.$store.dispatch('getProducts');
-    await this.$store.commit('uniqueCategory');
-    this.show = true;
-  },
+  // async mounted() {
+  //   await this.$store.dispatch('getProducts');
+  //   await this.$store.commit('uniqueCategory');
+  //   this.show = true;
+  // },
 }
 </script>

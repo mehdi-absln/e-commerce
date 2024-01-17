@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app v-if="show">
     <HeaderComp/>
     <v-main>
       <router-view/>
@@ -13,11 +13,16 @@ import FooterComp from "@/components/FooterComp";
 
 export default {
   name: 'App',
-  data: () => {
-    return {
-      show: null,
+  components: {FooterComp, HeaderComp},
+  data(){
+    return{
+      show: null
     }
   },
-  components: {FooterComp, HeaderComp},
+  async mounted() {
+    await this.$store.dispatch('getProducts');
+    await this.$store.commit('uniqueCategory');
+    this.show = true;
+  },
 };
 </script>

@@ -1,16 +1,17 @@
-<template>
-  <v-container class="py-10">
+<template v-if="show">
+  <v-container class="h-100" v-if="totalPrice===0"><h2 class="d-flex justify-center align-center display-2 font-weight-bold h-100">سبد خالی است</h2></v-container>
+  <v-container v-else class="py-10">
     <h2>سبد خرید ({{this.cart.length}})</h2>
     <div v-for="product in cart" :key="product.id" class="w-100 mt-9">
       <v-row class="align-center justify-space-between">
-        <v-col cols="2">
-          <img class="w-100" :src="product.image" :alt="product.title"/>
+        <v-col md="3" xl="2" cols="12"  class="d-flex justify-center">
+          <img class="product-image" :src="product.image" :alt="product.title"/>
         </v-col>
-        <v-col cols="6">
+        <v-col md="5" xl="6" cols="12">
           <h3 class="display-1 font-weight-bold">{{ product.title }}</h3>
           <p class="pt-5">{{ product.description }}</p>
         </v-col>
-        <v-col cols="2" class="d-flex align-center justify-center">
+        <v-col md="3" xl="2" cols="12" class="d-flex align-center justify-center">
           <span>{{ product.price }}</span>
           <form class="ms-6">
             <div class="value-button" id="decrease" @click="decreaseCartQuantity(product.id)">-</div>
@@ -22,7 +23,7 @@
         </v-col>
       </v-row>
     </div>
-    <hr/>
+    <hr class="mt-5"/>
     <div class="pt-5"><h5 class="total-price-text">جمع سبد خرید: <span>{{totalPrice}}</span></h5></div>
   </v-container>
 </template>
@@ -32,65 +33,80 @@ form {
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
-}
-.value-button {
-  display: inline-block;
-  border: 1px solid #ddd;
-  margin: 0px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 11px 0;
-  background: #eee;
-  user-select: none;
-}
 
-.value-button:hover {
-  cursor: pointer;
-}
+  .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    user-select: none;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 
-form #decrease {
-  border-radius: 0 0 8px 8px;
-}
+  & #decrease {
+    border-radius: 0 0 8px 8px;
+  }
 
-form #increase {
-  border-radius: 8px 8px 0 0;
-}
+  & #increase {
+    border-radius: 8px 8px 0 0;
+  }
 
-form #input-wrap {
-  margin: 0px;
-  padding: 0px;
-}
+  & #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
 
-input#number {
-  text-align: center;
-  border: none;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  width: 40px;
-  height: 40px;
-}
+  input#number {
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+  }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .total-price-text {
+    font-size: 1.3rem;
+
+    span {
+      font-weight: 500;
+    }
+  }
 }
 .delete-btn {
   color: #DC3545 !important;
   caret-color: #DC3545 !important;
-  height: 40px!important;
-  min-width: 50px!important;
-  padding: 0 0!important;
+  height: 40px !important;
+  min-width: 50px !important;
+  padding: 0 0 !important;
+
   img {
     width: 18px;
   }
 }
-.total-price-text{
-  font-size: 1.3rem;
-  span{
-    font-weight: 500;
+.h-100{
+  height: 100%;
+}
+@media only screen and (max-width: 960px) {
+  .product-image {
+    width: 40%;
+  }
+}
+@media (min-width: 960px), (max-width: 320px) {
+  .product-image {
+    width: 100%;
   }
 }
 </style>

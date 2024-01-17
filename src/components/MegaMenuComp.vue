@@ -45,18 +45,6 @@
                 {{ card.description.substring(0, 40).concat('...') }}
               </div>
             </v-card-text>
-            <v-card-actions class="mega-menu-card-btn-wrapper p-absolute mt-4">
-              <v-btn
-                  text
-                  color="purple"
-                  class="mega-menu-card-btn w-100"
-              >
-                <v-icon aria-label="My Account" role="img" aria-hidden="false">
-                  mdi-cart-outline
-                </v-icon>
-                سبد خرید
-              </v-btn>
-            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
@@ -64,38 +52,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "MegaMenu",
-  props:['showMegaMenu'],
-  data() {
-    return {
-      productCategoryCard: [],
-    }
-  },
-  computed: {
-    categories() {
-      return this.$store.getters.getCategory;
-    },
-    productCategoriesTitle() {
-      return this.$store.state.productCategoriesTitle
-    },
-  },
-  methods: {
-    showCategoryData(link) {
-      this.productCategoryCard = this.categories(link).slice(0,3);
-    },
-  },
-}
-</script>
-
 <style lang="scss" scoped>
 @import "../assets/scss/variable";
 
 @media only screen and (max-width: 991px){
- .mega-menu-card{
-   display: none!important;
- }
+  .mega-menu-card{
+    display: none!important;
+  }
 }
 .mega-menu-container {
   z-index: 3;
@@ -135,3 +98,28 @@ export default {
   }
 }
 </style>
+
+<script>
+export default {
+  name: "MegaMenu",
+  props:['showMegaMenu'],
+  data() {
+    return {
+      productCategoryCard: [],
+    }
+  },
+  computed: {
+    categories() {
+      return this.$store.getters.getCategory;
+    },
+    productCategoriesTitle() {
+      return this.$store.state.productCategoriesTitle
+    },
+  },
+  methods: {
+    showCategoryData(link) {
+      this.productCategoryCard = this.categories(link).slice(0,3);
+    },
+  },
+}
+</script>

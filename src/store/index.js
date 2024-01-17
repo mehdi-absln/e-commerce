@@ -10,7 +10,6 @@ export default new Vuex.Store({
         uniqueIds: [],
         productCategoriesTitle: [],
         cart: [],
-        quantity: null,
     },
     getters: {
         getCategory: (state) => (category) => {

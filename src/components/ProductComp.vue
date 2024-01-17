@@ -1,11 +1,10 @@
 <template>
-  <router-link  :to="{ name: 'ProductDetailView', params: { id: card.id } }">
-  <v-card class="tab-card cursor-pointer"
-          max-width="270"
+  <router-link class="w-100"  :to="{ name: 'ProductDetailView', params: { id: card.id } }">
+  <v-card class="tab-card cursor-pointer w-100"
   >
     <v-img
-        height="150"
         :src="card.image"
+        height="200"
     ></v-img>
     <v-card-title>{{ card.title.substring(0, 20).concat('...') }}</v-card-title>
     <v-card-text class="tab-card-text">

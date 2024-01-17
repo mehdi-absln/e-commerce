@@ -3,7 +3,7 @@
     <nav class="container">
       <v-row class="align-center justify-space-between">
         <v-col class="order-1" lg="2" md="4" cols="4">
-          <img class="logo" src="../assets/img/logo/majazite-officially-logo.png" alt="logo">
+          <router-link :to="{name: 'HomeView'}"><img class="logo" src="../assets/img/logo/majazite-officially-logo.png" alt="logo"></router-link>
         </v-col>
         <v-col lg="5" cols="12" class="d-flex align-start justify-center order-lg-2 pt-0 pt-lg-2 order-3">
           <v-text-field
