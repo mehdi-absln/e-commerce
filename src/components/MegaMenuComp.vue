@@ -5,7 +5,7 @@
         <v-col class="col-12 col-md-2">
           <p v-for="(link,index) in uniqueCategories" :key="link + index" @mouseover="showCategoryData(link)"
              class="pt-10 cursor-pointer d-block">
-            <router-link class="mega-menu-category-title" :to="link">{{ link }}</router-link>
+            <router-link class="mega-menu-category-title" to="/products">{{ link }}</router-link>
           </p>
         </v-col>
         <v-col class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0" cols="10">
