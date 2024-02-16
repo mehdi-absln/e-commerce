@@ -3,12 +3,12 @@
     <!--    Tab product category    -->
     <v-col cols="12" class="row gap-row-sm gap-col-sm ">
       <v-btn
-          v-for="(link,index) in productCategoriesTitle" :key="link + index"
+          v-for="(category,index) in uniqueCategories" :key="category + index"
           outlined
           class="radius-1 tab-category-btn cursor-pointer col-sm-3 col-5 col-lg-2 py-7"
           x-large
-          @click="showCategoryData(link.category,index)">
-        {{ link.category }}
+          @click="showCategoryData(category,index)">
+        {{ category }}
       </v-btn>
     </v-col>
     <!--     Products   -->
@@ -71,8 +71,8 @@ export default {
     categories() {
       return this.$store.getters.getCategory;
     },
-    productCategoriesTitle() {
-      return this.$store.state.productCategoriesTitle;
+    uniqueCategories() {
+      return this.$store.state.uniqueCategories;
     },
   },
   methods: {
@@ -84,7 +84,7 @@ export default {
     }
   },
   mounted() {
-     this.showCategoryData('لباس های مردانه', 0)
+     this.showCategoryData('لباس های مردانه', 0);
   },
 }
 </script>

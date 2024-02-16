@@ -3,49 +3,13 @@
     <v-container class="p-relative">
       <v-row>
         <v-col class="col-12 col-md-2">
-          <p v-for="(link,index) in productCategoriesTitle" :key="link + index" @mouseover="showCategoryData(link.category)"
+          <p v-for="(link,index) in uniqueCategories" :key="link + index" @mouseover="showCategoryData(link)"
              class="pt-10 cursor-pointer d-block">
-            <router-link class="mega-menu-category-title" :to="link.category">{{ link.category }}</router-link>
+            <router-link class="mega-menu-category-title" :to="link">{{ link }}</router-link>
           </p>
         </v-col>
-        <v-col class="d-flex flex-wrap col-md-10 justify-space-around">
-          <v-card v-for="card in productCategoryCard" :key="card.id" class="mega-menu-card"
-                  max-width="200"
-          >
-            <v-img
-                height="150"
-                max-width="200"
-                :src="card.image"
-            ></v-img>
-            <v-card-title>{{ card.title.substring(0, 20).concat('...') }}</v-card-title>
-            <v-card-text class="mega-menu-card-text">
-              <v-row
-                  align="center"
-                  class="mx-0"
-              >
-                <v-rating
-                    :value="card.rating.rate"
-                    color="amber"
-                    dense
-                    half-increments
-                    readonly
-                    size="14"
-                ></v-rating>
-
-                <div class="grey--text ms-4">
-                  4.5 (413)
-                </div>
-              </v-row>
-
-              <div class="my-4 text-subtitle-1">
-                {{ card.category }}
-              </div>
-
-              <div class="card-description d-flex">
-                {{ card.description.substring(0, 40).concat('...') }}
-              </div>
-            </v-card-text>
-          </v-card>
+        <v-col class="d-flex flex-wrap justify-space-between gap-row-sm tab-card-product-container pa-0 pe-0" cols="10">
+          <ProductComp class="col-md-3 col-sm-4 col-12" v-for="card in productCategoryCard" :card="card" :key="card.id"/>
         </v-col>
       </v-row>
     </v-container>
@@ -100,8 +64,11 @@
 </style>
 
 <script>
+import ProductComp from "@/components/ProductComp.vue";
+
 export default {
   name: "MegaMenu",
+  components: {ProductComp},
   props:['showMegaMenu'],
   data() {
     return {
@@ -112,8 +79,8 @@ export default {
     categories() {
       return this.$store.getters.getCategory;
     },
-    productCategoriesTitle() {
-      return this.$store.state.productCategoriesTitle
+    uniqueCategories() {
+      return this.$store.state.uniqueCategories
     },
   },
   methods: {

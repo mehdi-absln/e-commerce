@@ -7,7 +7,7 @@ export default new Vuex.Store({
     state: {
         products: [],
         product: null,
-        uniqueIds: [],
+        uniqueCategories: [],
         productCategoriesTitle: [],
         cart: [],
     },
@@ -22,7 +22,7 @@ export default new Vuex.Store({
             return state.cart.reduce((count, curItem) => {
                 return count + (curItem.quantity * curItem.price);
             }, 0);
-        }
+        },
     },
     mutations: {
         setProducts(state, products) {
@@ -40,26 +40,33 @@ export default new Vuex.Store({
                 if(state.cart[cartItemIndex].quantity === 10) return  0;
                 state.cart[cartItemIndex].quantity++;
             }
-            console.log(state.cart)
+            localStorage.setItem('cart', JSON.stringify(state.cart));
         },
         incrementCartItemQuantity (state, id) {
             const cartItemIndex =   state.cart.findIndex(item => item.id === id);
             if(state.cart[cartItemIndex].quantity === 10) return 0;
             state.cart[cartItemIndex].quantity++;
+            localStorage.setItem('cart', JSON.stringify(state.cart));
         },
         decrementCartItemQuantity (state, id) {
             const cartItemIndex =   state.cart.findIndex(item => item.id === id);
             if(state.cart[cartItemIndex].quantity === 1) return  0;
             state.cart[cartItemIndex].quantity--;
+            localStorage.setItem('cart', JSON.stringify(state.cart));
         },
         removeCartProductItem(state,id){
-          state.cart = state.cart.filter(product=> product.id !== id);
+            state.cart = state.cart.filter(product=> product.id !== id);
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+        },
+        initializeCart(state) {
+            const savedCart = localStorage.getItem('cart');
+            state.cart = JSON.parse(savedCart);
         },
         uniqueCategory: (state) => {
-            state.productCategoriesTitle = state.products.filter(element => {
-                const isDuplicate = state.uniqueIds.includes(element.category);
+          state.products.filter(element => {
+                const isDuplicate = state.uniqueCategories.includes(element.category);
                 if (!isDuplicate) {
-                    state.uniqueIds.push(element.category);
+                    state.uniqueCategories.push(element.category);
                     return true;
                 }
                 return false;
@@ -77,6 +84,9 @@ export default new Vuex.Store({
             let product = await data.json();
             commit("setProduct", product);
         },
+        initializeCart({ commit }) {
+            commit('initializeCart');
+        }
     },
     modules: {}
 })

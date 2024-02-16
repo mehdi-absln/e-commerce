@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9947c736-9163-4144-8724-88650b61a8d4" name="Default Changelist" comment="fixup! test">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductComp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TabProductsComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabProductsComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/CartView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CartView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ProductDetailView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductDetailView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProductsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductsView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +190,28 @@
       <workItem from="1705183193488" duration="8569000" />
       <workItem from="1705265854356" duration="704000" />
       <workItem from="1705409613235" duration="3260000" />
-      <workItem from="1705502069810" duration="3373000" />
+      <workItem from="1705502069810" duration="11902000" />
+      <workItem from="1705703941766" duration="3817000" />
+      <workItem from="1705760276985" duration="5141000" />
+      <workItem from="1706017682151" duration="2167000" />
+      <workItem from="1706210068357" duration="7747000" />
+      <workItem from="1706364833415" duration="10845000" />
+      <workItem from="1706539491504" duration="11271000" />
+      <workItem from="1706627212120" duration="4552000" />
+      <workItem from="1706810240749" duration="3906000" />
+      <workItem from="1706913237634" duration="1094000" />
+      <workItem from="1707000878118" duration="5712000" />
+      <workItem from="1707083499682" duration="3813000" />
+      <workItem from="1707143589044" duration="10838000" />
+      <workItem from="1707346205768" duration="5605000" />
+      <workItem from="1707511922052" duration="6478000" />
+      <workItem from="1707573042440" duration="722000" />
+      <workItem from="1707600379399" duration="5836000" />
+      <workItem from="1707824443345" duration="5964000" />
+      <workItem from="1707853823822" duration="962000" />
+      <workItem from="1707946296333" duration="3388000" />
+      <workItem from="1708015262205" duration="1783000" />
+      <workItem from="1708116588710" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;first commit&quot;&#10;&#10;This reverts commit ddf311da">
       <option name="closed" value="true" />

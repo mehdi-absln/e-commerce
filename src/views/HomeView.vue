@@ -110,23 +110,6 @@
             حضور در بهشت محصولات را به خودتان هدیه دهید. فراموش نکنید که شما شایسته بهترین‌هایید و ما بهترین‌ها را
             برایتان
             فراهم ساخته‌ایم!</p>
-          <v-row class="justify-md-space-between justify-center">
-            <v-col class="d-flex white align-center justify-space-around radius-1 mt-lg-15 my-8 " cols="11" lg="3"
-                   md="5"
-                   v-for="(link,index) in productCategoriesTitle" :key="link + index">
-              <img class="category-list-item-image radius-1" :src="link.image" :alt="link.category">
-              <router-link class="category-list-item-link text-center" :to="link.category">{{ link.category }}
-                <v-icon
-                    dark
-                    right
-                    class="pl-3"
-                    color="black"
-                >
-                  mdi-chevron-left
-                </v-icon>
-              </router-link>
-            </v-col>
-          </v-row>
         </v-row>
       </v-container>
     </section>
@@ -246,7 +229,7 @@
         <v-row class="products-section-row">
           <div class="d-flex justify-space-between align-center w-100 pb-10">
             <h2 class="display-1 font-weight-bold purple--text"> محصولات ما</h2>
-            <router-link class="products-link text-center" to="/"> مشاهده همه
+            <router-link class="products-link text-center" to="/products"> مشاهده همه
               <v-icon
                   dark
                   right
@@ -268,7 +251,7 @@
         <v-row class="products-section-row">
           <div class="d-flex justify-space-between align-center w-100 pb-10">
             <h2 class="display-1 font-weight-bold purple--text"> محصولات ویژه</h2>
-            <router-link class="products-link text-center" to="/"> مشاهده همه
+            <router-link class="products-link text-center" to="/products"> مشاهده همه
               <v-icon
                   dark
                   right
@@ -402,10 +385,5 @@ export default {
       setTimeout(() => (this[l] = false), 3000)
     },
   },
-  // async mounted() {
-  //   await this.$store.dispatch('getProducts');
-  //   await this.$store.commit('uniqueCategory');
-  //   this.show = true;
-  // },
 }
 </script>

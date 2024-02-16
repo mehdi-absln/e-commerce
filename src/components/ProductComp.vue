@@ -1,6 +1,6 @@
 <template>
-  <router-link class="w-100"  :to="{ name: 'ProductDetailView', params: { id: card.id } }">
-  <v-card class="tab-card cursor-pointer w-100"
+  <router-link class="w-100"  :to="{ name: 'ProductDetailView', params: { id: card.id }}">
+  <v-card  class="tab-card cursor-pointer w-100"
   >
     <v-img
         :src="card.image"
@@ -37,6 +37,9 @@
 </template>
 
 <style scoped lang="scss">
+.tab-card{
+  height: 100%;
+}
 .tab-card:hover{
   filter: drop-shadow(0 1px 5px rgba(0,0,0,.2));
   transition: all 0.3s;

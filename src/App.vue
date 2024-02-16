@@ -2,7 +2,7 @@
   <v-app v-if="show">
     <HeaderComp/>
     <v-main>
-      <router-view/>
+      <router-view :key="$route.fullPath"/>
     </v-main>
     <FooterComp/>
   </v-app>
@@ -22,6 +22,7 @@ export default {
   async mounted() {
     await this.$store.dispatch('getProducts');
     await this.$store.commit('uniqueCategory');
+    await this.$store.dispatch('initializeCart');
     this.show = true;
   },
 };

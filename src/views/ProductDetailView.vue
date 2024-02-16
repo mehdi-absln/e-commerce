@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div class="w-100 d-flex justify-end mt-9">
-      <router-link class="product-detail-link text-center" to="/"> بازگشت
+      <router-link class="product-detail-link text-center" to="" @click.native="goBack"> بازگشت
         <v-icon
             dark
             right
@@ -82,6 +82,7 @@
 </style>
 
 <script>
+
 export default {
   name: "ProductDetailView",
   data(){
@@ -105,6 +106,9 @@ export default {
     makeRequest(){
       this.$store.dispatch('getProduct',this.$route.params.id)
     },
+    goBack() {
+      this.$router.go(-1);
+    }
   },
   mounted() {
    this.makeRequest();
