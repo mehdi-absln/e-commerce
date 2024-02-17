@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9947c736-9163-4144-8724-88650b61a8d4" name="Default Changelist" comment="fixup! test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +199,7 @@
       <workItem from="1707853823822" duration="962000" />
       <workItem from="1707946296333" duration="3388000" />
       <workItem from="1708015262205" duration="1783000" />
-      <workItem from="1708116588710" duration="4479000" />
+      <workItem from="1708116588710" duration="5595000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;first commit&quot;&#10;&#10;This reverts commit ddf311da">
       <option name="closed" value="true" />
