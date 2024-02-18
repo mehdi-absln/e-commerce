@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9947c736-9163-4144-8724-88650b61a8d4" name="Default Changelist" comment="fixup! test">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/0e029e1f5ae93282cdbf3010d3254192.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/6147c3cbc723d62153b3789c3a42d629.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/69ca9e8212e314866a82694db31e9575.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/82bab10edd62019510aa960721b88b98.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/logo/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/eslint/0c655646.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver/CartView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver/CartView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver/ProductDetailView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver/ProductDetailView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDownComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountDownComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MegaMenuComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TabProductsComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabProductsComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProductsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductsView.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="Vue Single File Component" />
+        <option value="Vue Options API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2db8c985ee5dee20b8df9c536918572116fc1787" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/views/HomeView.vue" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2BTz0J4EmtutG6xbXeSZIg67GQR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/e-commerce/src/assets/img/logo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Options API Component&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\e-commerce\src\assets\img\logo" />
+      <recent name="E:\Projects\e-commerce\src\assets\img" />
+      <recent name="E:\Projects\e-commerce\src\assets\fonts" />
+      <recent name="E:\Projects\e-commerce\src\assets\font" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\e-commerce\src\assets\img" />
+      <recent name="E:\Projects\e-commerce\src\assets\img\banner" />
+      <recent name="E:\Projects\e-commerce\src" />
+      <recent name="E:\Projects\e-commerce" />
+      <recent name="E:\Projects\e-commerce\db" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9947c736-9163-4144-8724-88650b61a8d4" name="Default Changelist" comment="" />
+      <created>1656944641861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656944641861</updated>
+      <workItem from="1656944651443" duration="6440000" />
+      <workItem from="1657008338376" duration="4886000" />
+      <workItem from="1657029497525" duration="9283000" />
+      <workItem from="1657111520630" duration="9513000" />
+      <workItem from="1657136840824" duration="5551000" />
+      <workItem from="1657367688142" duration="11702000" />
+      <workItem from="1657542216448" duration="14572000" />
+      <workItem from="1657607946713" duration="6289000" />
+      <workItem from="1657631433999" duration="6155000" />
+      <workItem from="1657699450647" duration="2695000" />
+      <workItem from="1657783715444" duration="4554000" />
+      <workItem from="1657802772771" duration="11304000" />
+      <workItem from="1658235279580" duration="9666000" />
+      <workItem from="1658320044449" duration="10005000" />
+      <workItem from="1658409053762" duration="10331000" />
+      <workItem from="1658580093536" duration="5250000" />
+      <workItem from="1658647585192" duration="4748000" />
+      <workItem from="1658666861001" duration="11202000" />
+      <workItem from="1658752261707" duration="9469000" />
+      <workItem from="1658842669795" duration="2363000" />
+      <workItem from="1658907192363" duration="681000" />
+      <workItem from="1661005335319" duration="6077000" />
+      <workItem from="1661090221264" duration="6225000" />
+      <workItem from="1661180109950" duration="4916000" />
+      <workItem from="1661268621983" duration="3369000" />
+      <workItem from="1662644891006" duration="8916000" />
+      <workItem from="1662821393012" duration="2633000" />
+      <workItem from="1663052950294" duration="998000" />
+      <workItem from="1667061742409" duration="186000" />
+      <workItem from="1669215884654" duration="7004000" />
+      <workItem from="1669288052844" duration="12858000" />
+      <workItem from="1672829380188" duration="594000" />
+      <workItem from="1672907996252" duration="4129000" />
+      <workItem from="1673102782779" duration="5195000" />
+      <workItem from="1673177283017" duration="9945000" />
+      <workItem from="1673362725925" duration="7758000" />
+      <workItem from="1674567142279" duration="2951000" />
+      <workItem from="1675375026453" duration="53000" />
+      <workItem from="1675464335746" duration="14000" />
+      <workItem from="1676551154513" duration="76000" />
+      <workItem from="1676640977865" duration="9000" />
+      <workItem from="1676644110465" duration="25000" />
+      <workItem from="1676730964689" duration="556000" />
+      <workItem from="1678615341410" duration="66000" />
+      <workItem from="1683379474706" duration="3754000" />
+      <workItem from="1684075931288" duration="2554000" />
+      <workItem from="1684410594474" duration="1493000" />
+      <workItem from="1685189273120" duration="688000" />
+      <workItem from="1693150849431" duration="115000" />
+      <workItem from="1696376397021" duration="495000" />
+      <workItem from="1697640552979" duration="636000" />
+      <workItem from="1700687021194" duration="3876000" />
+      <workItem from="1701203637385" duration="359000" />
+      <workItem from="1701261143858" duration="4603000" />
+      <workItem from="1701377715091" duration="358000" />
+      <workItem from="1701378374923" duration="241000" />
+      <workItem from="1701378632584" duration="2086000" />
+      <workItem from="1701511875715" duration="5268000" />
+      <workItem from="1701957769338" duration="5061000" />
+      <workItem from="1701965878815" duration="919000" />
+      <workItem from="1701966879228" duration="1613000" />
+      <workItem from="1701968717492" duration="82000" />
+      <workItem from="1701968820196" duration="50000" />
+      <workItem from="1702735966993" duration="8466000" />
+      <workItem from="1703073353215" duration="6096000" />
+      <workItem from="1703522648020" duration="2668000" />
+      <workItem from="1703772829512" duration="9618000" />
+      <workItem from="1703863099981" duration="1796000" />
+      <workItem from="1704658028116" duration="7360000" />
+      <workItem from="1704748629232" duration="1659000" />
+      <workItem from="1704813609273" duration="6272000" />
+      <workItem from="1704924453621" duration="5155000" />
+      <workItem from="1705010353370" duration="7213000" />
+      <workItem from="1705070672527" duration="6675000" />
+      <workItem from="1705183193488" duration="8569000" />
+      <workItem from="1705265854356" duration="704000" />
+      <workItem from="1705409613235" duration="3260000" />
+      <workItem from="1705502069810" duration="11902000" />
+      <workItem from="1705703941766" duration="3817000" />
+      <workItem from="1705760276985" duration="5141000" />
+      <workItem from="1706017682151" duration="2167000" />
+      <workItem from="1706210068357" duration="7747000" />
+      <workItem from="1706364833415" duration="10845000" />
+      <workItem from="1706539491504" duration="11271000" />
+      <workItem from="1706627212120" duration="4552000" />
+      <workItem from="1706810240749" duration="3906000" />
+      <workItem from="1706913237634" duration="1094000" />
+      <workItem from="1707000878118" duration="5712000" />
+      <workItem from="1707083499682" duration="3813000" />
+      <workItem from="1707143589044" duration="10838000" />
+      <workItem from="1707346205768" duration="5605000" />
+      <workItem from="1707511922052" duration="6478000" />
+      <workItem from="1707573042440" duration="722000" />
+      <workItem from="1707600379399" duration="5836000" />
+      <workItem from="1707824443345" duration="5964000" />
+      <workItem from="1707853823822" duration="962000" />
+      <workItem from="1707946296333" duration="3388000" />
+      <workItem from="1708015262205" duration="1783000" />
+      <workItem from="1708116588710" duration="5595000" />
+      <workItem from="1708274175262" duration="701000" />
+    </task>
+    <task id="LOCAL-00001" summary="Revert &quot;first commit&quot;&#10;&#10;This reverts commit ddf311da">
+      <option name="closed" value="true" />
+      <created>1701966462851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701966462851</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixup! test" />
+    <MESSAGE value="Revert &quot;first commit&quot;&#10;&#10;This reverts commit ddf311da" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;first commit&quot;&#10;&#10;This reverts commit ddf311da" />
+  </component>
+</project>
